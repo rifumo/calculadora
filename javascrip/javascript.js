@@ -6,8 +6,12 @@ function getResult() {
 }
 function add(key) { 
     var result = getResult();
-    if (result!='0' || isNaN(key)) setResult(result + key);
-    else setResult(key);
+    if (result!='0' || isNaN(key)){
+        setResult(result + key);
+    } 
+    else {
+        setResult(key);
+    }
 }
 function calc() {
     var result = eval(getResult()); 
