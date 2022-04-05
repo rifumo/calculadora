@@ -13,10 +13,12 @@ function add(key) {
         setResult(key);
     }
 }
+
 function calc() {
     var result = eval(getResult()); 
     setResult(result);
 }
+
 function del() { 
     setResult(0);
 }
