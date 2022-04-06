@@ -22,6 +22,7 @@ h1{
 button {
   width: 100%;
   border-radius: 10px;
+  font-size: 5rem;
   background-color: rgb(198, 227, 239);
  }
 .ac {
