@@ -1,35 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap');
 
+/*   */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-table {
-    width: 100%;
-  }
-
-  /* Modify by Oskar Gelves*/
+/* Body */
 body{
-  width:100%; 
-  max-width:35rem;
-  border: solid black 5px;
-  margin: 5%;
- /*background-image: url("../image/analysis-statistics-economic-calculation-calculator-260nw-1688285446.jpg");*/
-  border-radius: 3%;
-  margin-left: auto;
-  margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("../images/analysis-statistics-economic-calculation-calculator-260nw-1688285446.jpg");
 }
 
-h1{
-  text-align: center;
-}
-button {
-  width: 100%;
-  font-size: 450%;
-  border-radius: 10px;
-  background-color: rgb(198, 227, 239);
-}
-.ac {
-  color: red;
+
+/* Cabecera Body */
+header{
+    background: #96bce5;   
+    background: linear-gradient(to right,  #8fe3ff, #e4f4fd); 
+    height: 46.8rem;
+    padding: 48px;
+    width: 100%;
 }
 
-button:focus {
-color: red;
+
+
+
+.contenedor{
+    width: 95%;
+    max-width:1200px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;  
 }
 
+#header img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    width: auto;
+    animation: moverArriba 1s ease-in;
+}
+
+.textos{
+    width: 56%;
+    color: #6c6464;
+}
+
+.textos h1{
+    color:  #04545c ;
+    font-size: 30px;
+    animation: moverDerecha 1s ease-in;
+}
+
+.textos h2{
+    font-size: 18px;
+    animation: moverIzquierda 1s ease-in;
+    text-align: justify;
+}
+
+li{
+    list-style-type: none;
+}
+
+.textos a{
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    animation: moverIzquierda 2s ease-in;
+    background-color:  #94343c;
+}
+
+.integrantes{
+    color: #04545c;
+}
+
+
+
+
+/* Animaciones */
+@keyframes moverIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moverArriba{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100%{
+        opacity:1;
+        transform: translate(0);
+    }
+}
+
+
+@media screen and (max-width:1000px){
+    #header img{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:800px){
+    #header img{
+        height: 370px;
+    }
+
+    .textos h1{
+        font-size: 25px;
+    }
+}
